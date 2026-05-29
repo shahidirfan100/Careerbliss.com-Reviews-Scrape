@@ -1,0 +1,57 @@
+{
+  "actorSpecification": 1,
+  "views": {
+    "overview": {
+      "title": "Overview",
+      "transformation": {
+        "fields": [
+          "review_id",
+          "company_name",
+          "job_title",
+          "rating",
+          "review_text",
+          "source_url",
+          "aggregate_rating",
+          "aggregate_review_count"
+        ]
+      },
+      "display": {
+        "component": "table",
+        "properties": {
+          "review_id": {
+            "label": "Review ID",
+            "format": "text"
+          },
+          "company_name": {
+            "label": "Company",
+            "format": "text"
+          },
+          "job_title": {
+            "label": "Job Title",
+            "format": "text"
+          },
+          "rating": {
+            "label": "Rating",
+            "format": "number"
+          },
+          "review_text": {
+            "label": "Review",
+            "format": "text"
+          },
+          "source_url": {
+            "label": "Source URL",
+            "format": "link"
+          },
+          "aggregate_rating": {
+            "label": "Company Rating",
+            "format": "number"
+          },
+          "aggregate_review_count": {
+            "label": "Review Count",
+            "format": "number"
+          }
+        }
+      }
+    }
+  }
+}

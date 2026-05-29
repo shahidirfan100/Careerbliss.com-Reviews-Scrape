@@ -1,0 +1,46 @@
+{
+  "title": "CareerBliss Reviews Scraper",
+  "description": "Extract employee reviews from CareerBliss company review URLs.",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "urls": {
+      "title": "Review URLs",
+      "type": "array",
+      "description": "One or more CareerBliss company URLs or reviews URLs.",
+      "editor": "stringList",
+      "prefill": [
+        "https://www.careerbliss.com/cisco-systems/reviews/"
+      ]
+    },
+    "results_wanted": {
+      "title": "Results wanted",
+      "type": "integer",
+      "description": "Maximum number of reviews to save.",
+      "minimum": 1,
+      "default": 20,
+      "prefill": 20,
+      "editor": "number"
+    },
+    "max_pages": {
+      "title": "Maximum pages per URL",
+      "type": "integer",
+      "description": "Maximum number of pages to scan for each URL.",
+      "minimum": 1,
+      "default": 20,
+      "prefill": 20,
+      "editor": "number"
+    },
+    "proxyConfiguration": {
+      "title": "Proxy configuration",
+      "type": "object",
+      "description": "Optional proxy settings.",
+      "editor": "proxy",
+      "default": {
+        "useApifyProxy": false
+      }
+    }
+  },
+  "required": [],
+  "additionalProperties": false
+}
