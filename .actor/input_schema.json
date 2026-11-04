@@ -1,46 +1,43 @@
 {
-  "title": "CareerBliss Reviews Scraper",
-  "description": "Extract employee reviews from CareerBliss company review URLs.",
-  "type": "object",
-  "schemaVersion": 1,
-  "properties": {
-    "urls": {
-      "title": "Review URLs",
-      "type": "array",
-      "description": "One or more CareerBliss company URLs or reviews URLs.",
-      "editor": "stringList",
-      "prefill": [
-        "https://www.careerbliss.com/cisco-systems/reviews/"
-      ]
+    "title": "CareerBliss Reviews Scraper",
+    "description": "Collect employee reviews from CareerBliss company pages.",
+    "type": "object",
+    "schemaVersion": 1,
+    "properties": {
+        "urls": {
+            "title": "CareerBliss URLs",
+            "type": "array",
+            "description": "CareerBliss company or review page URLs, for example https://www.careerbliss.com/cisco-systems/reviews/. Each URL accepts an optional location or job-title filter.",
+            "editor": "stringList",
+            "prefill": ["https://www.careerbliss.com/cisco-systems/reviews/"],
+            "default": ["https://www.careerbliss.com/cisco-systems/reviews/"]
+        },
+        "results_wanted": {
+            "title": "Results wanted",
+            "type": "integer",
+            "description": "Maximum number of reviews to save across the whole run.",
+            "minimum": 1,
+            "default": 20,
+            "editor": "number"
+        },
+        "max_pages": {
+            "title": "Maximum pages per URL",
+            "type": "integer",
+            "description": "Maximum number of review pages to scan for each URL.",
+            "minimum": 1,
+            "default": 20,
+            "editor": "number"
+        },
+        "proxyConfiguration": {
+            "title": "Proxy configuration",
+            "type": "object",
+            "description": "CareerBliss blocks direct requests from cloud data centers, so Apify Proxy is enabled by default. Turn it off only for a local run from a residential connection.",
+            "editor": "proxy",
+            "default": {
+                "useApifyProxy": true
+            }
+        }
     },
-    "results_wanted": {
-      "title": "Results wanted",
-      "type": "integer",
-      "description": "Maximum number of reviews to save.",
-      "minimum": 1,
-      "default": 20,
-      "prefill": 20,
-      "editor": "number"
-    },
-    "max_pages": {
-      "title": "Maximum pages per URL",
-      "type": "integer",
-      "description": "Maximum number of pages to scan for each URL.",
-      "minimum": 1,
-      "default": 20,
-      "prefill": 20,
-      "editor": "number"
-    },
-    "proxyConfiguration": {
-      "title": "Proxy configuration",
-      "type": "object",
-      "description": "Optional proxy settings.",
-      "editor": "proxy",
-      "default": {
-        "useApifyProxy": false
-      }
-    }
-  },
-  "required": [],
-  "additionalProperties": false
+    "required": [],
+    "additionalProperties": false
 }

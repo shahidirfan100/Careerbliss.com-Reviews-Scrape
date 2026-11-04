@@ -1,57 +1,107 @@
 {
-  "actorSpecification": 1,
-  "views": {
-    "overview": {
-      "title": "Overview",
-      "transformation": {
-        "fields": [
-          "review_id",
-          "company_name",
-          "job_title",
-          "rating",
-          "review_text",
-          "source_url",
-          "aggregate_rating",
-          "aggregate_review_count"
-        ]
-      },
-      "display": {
-        "component": "table",
-        "properties": {
-          "review_id": {
-            "label": "Review ID",
-            "format": "text"
-          },
-          "company_name": {
-            "label": "Company",
-            "format": "text"
-          },
-          "job_title": {
-            "label": "Job Title",
-            "format": "text"
-          },
-          "rating": {
-            "label": "Rating",
-            "format": "number"
-          },
-          "review_text": {
-            "label": "Review",
-            "format": "text"
-          },
-          "source_url": {
-            "label": "Source URL",
-            "format": "link"
-          },
-          "aggregate_rating": {
-            "label": "Company Rating",
-            "format": "number"
-          },
-          "aggregate_review_count": {
-            "label": "Review Count",
-            "format": "number"
-          }
+    "actorSpecification": 1,
+    "views": {
+        "overview": {
+            "title": "Overview",
+            "transformation": {
+                "fields": [
+                    "review_id",
+                    "company_name",
+                    "job_title",
+                    "location",
+                    "rating",
+                    "review_text",
+                    "review_url",
+                    "source_url",
+                    "person_you_work_for",
+                    "people_you_work_with",
+                    "work_setting",
+                    "support_you_get",
+                    "rewards_you_receive",
+                    "growth_opportunities",
+                    "company_culture",
+                    "way_you_work",
+                    "aggregate_rating",
+                    "aggregate_review_count"
+                ]
+            },
+            "display": {
+                "component": "table",
+                "properties": {
+                    "review_id": {
+                        "label": "Review ID",
+                        "format": "text"
+                    },
+                    "company_name": {
+                        "label": "Company",
+                        "format": "text"
+                    },
+                    "job_title": {
+                        "label": "Job Title",
+                        "format": "text"
+                    },
+                    "location": {
+                        "label": "Location",
+                        "format": "text"
+                    },
+                    "rating": {
+                        "label": "Rating",
+                        "format": "number"
+                    },
+                    "review_text": {
+                        "label": "Review",
+                        "format": "text"
+                    },
+                    "review_url": {
+                        "label": "Review URL",
+                        "format": "link"
+                    },
+                    "source_url": {
+                        "label": "Source URL",
+                        "format": "link"
+                    },
+                    "person_you_work_for": {
+                        "label": "Person You Work For",
+                        "format": "number"
+                    },
+                    "people_you_work_with": {
+                        "label": "People You Work With",
+                        "format": "number"
+                    },
+                    "work_setting": {
+                        "label": "Work Setting",
+                        "format": "number"
+                    },
+                    "support_you_get": {
+                        "label": "Support You Get",
+                        "format": "number"
+                    },
+                    "rewards_you_receive": {
+                        "label": "Rewards You Receive",
+                        "format": "number"
+                    },
+                    "growth_opportunities": {
+                        "label": "Growth Opportunities",
+                        "format": "number"
+                    },
+                    "company_culture": {
+                        "label": "Company Culture",
+                        "format": "number"
+                    },
+                    "way_you_work": {
+                        "label": "Way You Work",
+                        "format": "number"
+                    },
+                    "aggregate_rating": {
+                        "label": "Company Rating",
+                        "format": "number"
+                    },
+                    "aggregate_review_count": {
+                        "label": "Company Review Count",
+                        "format": "number"
+                    }
+                }
+            }
         }
-      }
     }
-  }
 }
